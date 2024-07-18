@@ -1,0 +1,13 @@
+Basic Maths Pattern 
+
+1. For the Reverse Number Problem we have to keep in Mind about the range
+   - Given Number should Not Be LESS THAN EQUAL TO INT_MIN 
+   - in the loop Reversed Number should not be Greater Than INT_MAX / 10
+
+
+2. Internal Sorting Function Takes O(n Log n) Time Complexity
+
+3. Ordered Map Complexity in Best , Average , Worst is O(LogN) (Storing and fetching)
+
+4.in Unordered Map The Time Complexity in Best  Scenario is O(1) (storing and fetching) and in Worst - O(N)
+	- So first use Unordered map and if TLE Comes Due To Collisions than use Ordered Map
