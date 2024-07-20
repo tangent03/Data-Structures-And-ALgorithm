@@ -13,6 +13,9 @@ Number of Iteration - (N-1)
 
 
 
+isme adjacent check hote hai aur har iteration me last me 
+aajata hai maximum
+
 */
 
 
@@ -35,6 +38,22 @@ void bubble_sort(int arr[],int n){
 	}
 }
 
+
+void bubble_sort_recursive(int arr[], int n) {
+    // Base Case: range == 1.
+    if (n == 1) return;
+
+    for (int j = 0; j <= n - 2; j++) {
+        if (arr[j] > arr[j + 1]) {
+            int temp = arr[j + 1];
+            arr[j + 1] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    //Range reduced after recursion:
+    bubble_sort_recursive(arr, n - 1);
+}
 
 int main(){
 	int n;
