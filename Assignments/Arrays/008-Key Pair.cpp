@@ -22,10 +22,10 @@ using namespace std;
 
 //brute force
 
-bool twoSumProblem(int arr[],int n){
+bool twoSumProblem(int arr[],int n,int k){
 	for(int i=0;i<n;i++){
 		for(int j=i+1;j<n;j++){
-			if(arr[i]==arr[j]){
+			if(arr[i]+arr[j]==k){
 				return true;
 			}
 		}
@@ -37,6 +37,7 @@ bool twoPointerSolution(int arr[],int n,int k){
 	//isse phele sort krlena O(NlogN);
 	int start=0;
 	int end=n-1;
+	sort(arr,arr+n);
 	while(start<end){
 		if(arr[start] + arr[end] == k){
 			return true;
@@ -62,7 +63,7 @@ int main() {
 		cin>>arr[i];
 	}
 	
-	sort(arr,arr+n);
+	
 	for(int i=0;i<n;i++){
 		cout<<arr[i]<<" ";
 	}

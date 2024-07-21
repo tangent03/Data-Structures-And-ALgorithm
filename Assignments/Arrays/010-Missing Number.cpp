@@ -50,20 +50,20 @@
 using namespace std;
 
 //Brute force 
-int sortingMethod(vector<int>&nums){
-	sort(nums.begin(),nums.end());
-	for(int i=0;i<nums.size();i++){
-		if(i==nums[i]){
-			continue;
-		}
-		else{
-			return i;
-		}
-	}
-	return nums.size();
+int sortingMethod(vector<int>& nums) {
+    sort(nums.begin(), nums.end());  // O(n log n)
+    for (int i = 0; i < nums.size(); i++) {  // O(n)
+        if (i == nums[i]) {
+            continue;
+        } else {
+            return i;
+        }
+    }
+    return nums.size();
 }
 
 
+//O(N)
 int xorMethod(vector<int>&nums){
 	int ans=0;
 	//xor for all values of array
