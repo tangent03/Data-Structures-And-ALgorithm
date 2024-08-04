@@ -34,26 +34,22 @@ int majorityElementBetterSolution(vector<int>& v) {
 
 // Optimal Solution using Moore's Voting Algorithm
 int majorityElementOptimalSolution(vector<int>& v) {
-    int count = 0;
-    int el;
-    for (int i = 0; i < v.size(); i++) {
-        if (count == 0) {
-            el = v[i];
-        }
-        count += (v[i] == el) ? 1 : -1;
+    int candidate = INT_MIN;
+    int life = 0;
+    int n = v.size();
+    for(int i=0;i<n;i++){
+    	if(v[i] == candidate){
+    		life++;
+    	}
+    	else if(life == 0){
+    		candidate = v[i];
+    		life = 1;
+    	}
+    	else{
+    		life--;
+    	}
     }
-
-    // Verifying if the found element is actually the majority element
-    count = 0;
-    for (int i = 0; i < v.size(); i++) {
-        if (v[i] == el) {
-            count++;
-        }
-    }
-    if (count > v.size() / 2) {
-        return el;
-    }
-    return -1;
+    return candidate;
 }
 
 int main() {
