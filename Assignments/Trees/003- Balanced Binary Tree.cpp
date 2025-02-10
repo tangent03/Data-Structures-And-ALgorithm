@@ -9,6 +9,15 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+ 
+ // Balanced Height mtlab - left binary tree aur right binary
+ // tree ka absolute difference 1 se chota hona chaiye
+ // 3 conditions
+ //1.Height of Left Subtree - Height of right Subtree <=1
+ //2. left subtreee balance
+ //3. right subtree balance
+ 
+ 
 class Solution {
 public:
 
