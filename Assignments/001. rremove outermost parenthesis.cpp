@@ -9,7 +9,7 @@ public:
             if(s[i] == "("){
                 if(check){
                     count++;
-                    res = res + s[i];
+                    res += s[i];
                 }
                 else{
                     check = true;
@@ -18,7 +18,7 @@ public:
             else{
                 if(count > 0){
                     count--;
-                    res = res = s[i];
+                    res += s[i];
                 }
                 else{
                     check = false;
@@ -32,3 +32,6 @@ public:
 
 
 //1021.
+
+
+//+= takes less time than res = res + s[i];
